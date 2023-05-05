@@ -26,7 +26,7 @@ public class SaveTester : MonoBehaviour
     [SerializeField] private string path;
     private async void Start()
     {
-        Save.Initialize(new string[] {}, path);
+        Save.Initialize(new string[] {}, path, new JsonUtilitySaveSerializer());
 
         Save.AddFeature<int>("Integer", 666);
         Save.AddFeature<int>("Integer_2", 123);

@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Diagnostics.SymbolStore;
@@ -10,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace SideRift.SaveSystem
 {
-    [Serializable] internal class FeaturesDict : SerializableDictionary<string, Feature>{}
-    [Serializable] internal class SaveData : SerializableDictionary<string, FeaturesDict>{}
+    [Serializable] public class FeaturesDict : SerializableDictionary<string, Feature>{}
+    [Serializable] public class SaveData : SerializableDictionary<string, FeaturesDict>{}
 
     public delegate void FeatureUpdatedEvent(string key, string value, Feature feature);
 
@@ -22,6 +23,7 @@ namespace SideRift.SaveSystem
         private const string EXTENTION = ".save";
 
         private static SaveData _saveData;
+        private static ISaveSerializer _saveSerializer;
         private static bool _isInitialized;
         private static string _filePath;
 
@@ -31,10 +33,11 @@ namespace SideRift.SaveSystem
         public static event Action onReadStart;
         public static event Action onReadComplete;
 
-        public static void Initialize(string[] categories, string filePath)
+        public static void Initialize(string[] categories, string filePath, ISaveSerializer saveSerializer)
         {
             _saveData = new SaveData();
             _saveData.Add(DEFAULT_CATEGORY, new FeaturesDict());
+            _saveSerializer = saveSerializer;
             for (int i = 0; i < categories.Length; i++)
             {
                 if (!_saveData.ContainsKey(categories[i]))
@@ -248,12 +251,11 @@ namespace SideRift.SaveSystem
 
         public static async Task WriteSave(string saveName)
         {
-            string jsonData = JsonUtility.ToJson(_saveData);
-
+            string fullPath = GetFullFilePath(saveName);
             onWriteStart?.Invoke();
-            await File.WriteAllTextAsync(GetFullFilePath(saveName), jsonData, Encoding.ASCII);
+            await _saveSerializer.Write(_saveData, fullPath);
             onWriteComplete?.Invoke();
-            Debug.LogFormat("Write save at {0} ({1} bytes)", _filePath, ASCIIEncoding.ASCII.GetByteCount(jsonData));
+            Debug.LogFormat("Write save at {0}", fullPath);
         }
 
         public static async Task ReadSave(string saveName)
@@ -261,8 +263,7 @@ namespace SideRift.SaveSystem
             string fullPath = GetFullFilePath(saveName);
 
             onReadStart?.Invoke();
-            string jsonData = await File.ReadAllTextAsync(fullPath);
-            _saveData = JsonUtility.FromJson<SaveData>(jsonData);
+            _saveData = await _saveSerializer.Read(fullPath);
             onReadComplete?.Invoke();
             Debug.LogFormat("Save loaded from {0}", fullPath);
         }

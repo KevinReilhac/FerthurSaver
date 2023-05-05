@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace SideRift.SaveSystem
 {
-    internal abstract class SerializableDictionaryBase<TKey, TValue, TValueStorage> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
+    public abstract class SerializableDictionaryBase<TKey, TValue, TValueStorage> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
     {
         [SerializeField]
         TKey[] m_keys;
@@ -76,7 +76,7 @@ namespace SideRift.SaveSystem
         }
     }
 
-    internal class SerializableDictionary<TKey, TValue> : SerializableDictionaryBase<TKey, TValue, TValue>
+    public class SerializableDictionary<TKey, TValue> : SerializableDictionaryBase<TKey, TValue, TValue>
     {
         public SerializableDictionary()
         {
