@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a62858ee5c9a954fa407ae6503c467f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: C:\Users\Shadow\Documents\_dev\KebabSaver\Assets
+  path: C:\Users\Shadow\Documents\_dev\KebabSaver\Saver\Assets
 --- !u!4 &23186749
 Transform:
   m_ObjectHideFlags: 0

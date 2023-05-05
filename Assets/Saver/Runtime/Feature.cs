@@ -12,30 +12,63 @@ using System.Text;
 namespace SideRift.SaveSystem
 {
     [System.Serializable]
-    public class Feature //: ISerializationCallbackReceiver
+    public class Feature : ISerializationCallbackReceiver
     {
-        [SerializeField] protected object value;
+        public object value;
+        public Type valueType = null;
+
+        [SerializeField] private string serializedValue;
+        [SerializeField] private string serializedType;
+
+        public Type GetValueType()
+        {
+            return this.valueType;
+        }
+
+        public void OnBeforeSerialize()
+        {
+            byte[] bytesValue = BinaryUtilities.ToByteArray(value);
+            serializedValue = BinaryUtilities.ByteArrayToString(bytesValue);
+            serializedType = valueType.AssemblyQualifiedName;
+        }
+
+        public void OnAfterDeserialize()
+        {
+            byte[] bytesValue = BinaryUtilities.StringToByteArray(serializedValue);
+            value = BinaryUtilities.FromByteArray<object>(bytesValue);
+            valueType = Type.GetType(serializedType);
+        }
+
 
         public bool TestType<T>()
         {
-            return (value is T);
+            return valueType == typeof(T);
         }
     }
 
-    public class Feature<T> : Feature
+    public class Feature<T>
     {
+        private Feature _feature;
+        public Feature(Feature feature)
+        {
+            _feature = feature;
+        }
+
         public Feature(T value)
         {
-            this.value = value;
+            _feature = new Feature();
+            _feature.value = value;
+            _feature.valueType = typeof(T);
         }
 
         public Feature()
         {
+            _feature = new Feature();
         }
 
         public T GetValue()
         {
-            if (value is T typedValue)
+            if (_feature.value is T typedValue)
             {
                 return (typedValue);
             }
@@ -46,7 +79,7 @@ namespace SideRift.SaveSystem
 
         public Feature<T> SetValue(T value)
         {
-            this.value = value;
+            _feature.value = value;
             return (this);
         }
 
@@ -55,5 +88,8 @@ namespace SideRift.SaveSystem
             get => GetValue();
             set => SetValue(value);
         }
+
+        public Feature GetFeature() => _feature;
+        public static implicit operator Feature(Feature<T> d) => d.GetFeature();
     }
 }

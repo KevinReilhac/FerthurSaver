@@ -7,12 +7,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace SideRift.SaveSystem
 {
-    [Serializable] internal class FeaturesDict : Dictionary<string, Feature>{}
-    [Serializable] internal class SaveData : Dictionary<string, FeaturesDict>{}
+    [Serializable] internal class FeaturesDict : SerializableDictionary<string, Feature>{}
+    [Serializable] internal class SaveData : SerializableDictionary<string, FeaturesDict>{}
 
     public delegate void FeatureUpdatedEvent(string key, string value, Feature feature);
 
@@ -25,7 +24,6 @@ namespace SideRift.SaveSystem
         private static SaveData _saveData;
         private static bool _isInitialized;
         private static string _filePath;
-        private static JsonSerializerSettings serializationSettings = null;
 
         public static event FeatureUpdatedEvent OnFeatureUpdated;
         public static event Action onWriteStart;
@@ -35,20 +33,18 @@ namespace SideRift.SaveSystem
 
         public static void Initialize(string[] categories, string filePath)
         {
-            SetupSerializationSettings();
             _saveData = new SaveData();
             _saveData.Add(DEFAULT_CATEGORY, new FeaturesDict());
             for (int i = 0; i < categories.Length; i++)
+            {
+                if (!_saveData.ContainsKey(categories[i]))
+                {
                 _saveData.Add(categories[i], new FeaturesDict());
+                }
+            }
+
             _filePath = filePath;
-
             _isInitialized = true;
-        }
-
-        private static void SetupSerializationSettings()
-        {
-            serializationSettings = new JsonSerializerSettings();
-            serializationSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
         }
 
         /// <summary>
@@ -77,7 +73,7 @@ namespace SideRift.SaveSystem
             //Check if this key exist or return default value 
             if (categoryDict.TryGetValue(key, out var result))
             {
-                return result as Feature<T>;
+                return (new Feature<T>(result));
             }
             else
             {
@@ -95,7 +91,7 @@ namespace SideRift.SaveSystem
 
             //Try to return result with good type
             if (result.TestType<T>())
-                return (result as Feature<T>);
+                return (new Feature<T>(result));
 
             Debug.LogErrorFormat("{0} item has wrong type.", key);
             return new Feature<T>(defaultValue);
@@ -238,36 +234,42 @@ namespace SideRift.SaveSystem
                 return new Feature<T>();
             }
 
+            if (categoryDict.ContainsKey(key))
+            {
+                Debug.LogErrorFormat("{0}/{1} Feature already exist", category, key);
+                return (new Feature<T>());
+            }
+
             Feature<T> newFeature = new Feature<T>(value);
             categoryDict.Add(key, newFeature);
             OnFeatureUpdated?.Invoke(key, category, newFeature);
             return (newFeature);
         }
 
-        public static async void WriteSave(int saveID)
+        public static async Task WriteSave(string saveName)
         {
-            string jsonData = JsonConvert.SerializeObject(_saveData, serializationSettings);
+            string jsonData = JsonUtility.ToJson(_saveData);
 
             onWriteStart?.Invoke();
-            await File.WriteAllTextAsync(GetFullFilePath(saveID), jsonData, Encoding.ASCII);
+            await File.WriteAllTextAsync(GetFullFilePath(saveName), jsonData, Encoding.ASCII);
             onWriteComplete?.Invoke();
             Debug.LogFormat("Write save at {0} ({1} bytes)", _filePath, ASCIIEncoding.ASCII.GetByteCount(jsonData));
         }
 
-        public static async Task ReadSave(int saveID)
+        public static async Task ReadSave(string saveName)
         {
-            string fullPath = GetFullFilePath(saveID);
+            string fullPath = GetFullFilePath(saveName);
 
             onReadStart?.Invoke();
             string jsonData = await File.ReadAllTextAsync(fullPath);
-            _saveData = JsonConvert.DeserializeObject<SaveData>(jsonData, serializationSettings);
+            _saveData = JsonUtility.FromJson<SaveData>(jsonData);
             onReadComplete?.Invoke();
             Debug.LogFormat("Save loaded from {0}", fullPath);
         }
 
-        private static string GetFullFilePath(int saveID)
+        private static string GetFullFilePath(string saveName)
         {
-            return (Path.Combine(_filePath, string.Format("save_{0}{1}", saveID, EXTENTION)));
+            return (Path.Combine(_filePath, string.Format("save_{0}{1}", saveName, EXTENTION)));
         }
     }
 }

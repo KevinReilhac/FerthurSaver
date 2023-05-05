@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,14 +17,14 @@ public class ClassA
 public class ClassB
 {
     [SerializeField] public float aaa = 0.1f;
-    [SerializeField] public System.Numerics.Vector3 vector = new System.Numerics.Vector3(5, 7, 666);
-    [SerializeField] public Quaternion quat = new Quaternion(0f, 4f, 10f, 70f);
+    [SerializeField] public float bbb = 0.1f;
+    [SerializeField] public float ccc = 100.1f;
 }
 
 public class SaveTester : MonoBehaviour
 {
     [SerializeField] private string path;
-    private void Awake()
+    private async void Start()
     {
         Save.Initialize(new string[] {}, path);
 
@@ -35,7 +36,14 @@ public class SaveTester : MonoBehaviour
         Save.AddFeature<bool>("Bool_2", true);
         Save.AddFeature<float>("Float_0", 6.798f);
         Save.AddFeature<ClassA>("Complex", new ClassA());
-        Save.WriteSave(0);
+
+        await Save.WriteSave("0");
+        await Save.ReadSave("0");
+
+        Feature<int> feature = Save.Get<int>("Integer", defaultValue: -1);
+        Debug.Log(Save.Get<ClassA>("Complex").Value.b.ccc);
+        Debug.Log(feature);
+        Debug.Log(feature.Value);
     }
 
 
