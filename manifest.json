@@ -1,0 +1,476 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "api/*": {
+        "baseUrl": "https://kevinreilhac.github.io/FerthurSaver/",
+        "changefreq": "daily"
+      }
+    },
+    "baseUrl": "https://kevinreilhac.github.io/FerthurSaver/",
+    "changefreq": "weekly"
+  },
+  "homepages": [],
+  "source_base_path": "D:/a/FerthurSaver/FerthurSaver/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.AesSaveEncryptor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.AesSaveEncryptor.html",
+          "hash": "/ZZ4DuZcqw0vI6G0UKhl3iJi68c/KZohGyTt4bT6Tx0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.BinarySaveSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.BinarySaveSerializer.html",
+          "hash": "5oxRdXiQPInCyXDglqASqG2yMreHE6klxntqnMCIQlk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.CategoryDict.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.CategoryDict.html",
+          "hash": "ZusxGzj8o5D7TnF5ncPw8WgdyZZI7GpH6aGRjMPTWfc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Feature-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Feature-1.html",
+          "hash": "bpiTeeo1RKo4goXKV6eB1prcqM04Dy8EQaAKQ847/Yk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Feature.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Feature.html",
+          "hash": "QuwZRFjgLZc0R9YUjId5vzSD2jdpGMHzUHWvhgdBur0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.FeatureUpdatedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.FeatureUpdatedEvent.html",
+          "hash": "ClK4tWL7xzPYhdKWqhayDjSuwPVY/FjtR+/r0xZ/HHc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.ISaveItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.ISaveItem.html",
+          "hash": "0Ezybzhp9jUok5rj4dlDfyOujyiAaSdrlarvkrxawyA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.ISaveSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.ISaveSerializer.html",
+          "hash": "+6+W88zb3H9w1JZdIt0LhgYeIqQFtsjvyYTXOpE6Gg0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.JsonUtilitySaveSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.JsonUtilitySaveSerializer.html",
+          "hash": "8Uw6dAAcw1cPWv/xqxwEiuGeJrZbT8vV90tQlni+W2w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Save.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Save.html",
+          "hash": "mD163NpVo3mIysU6UFaxcRc7c6iU9hWSvUHUdLaE+0o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.SaveData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.SaveData.html",
+          "hash": "NTPhvG6gMK5zcq7dBMnxuyB7Nj+fclkAlVusvQuslzI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.ACustomTypeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.ACustomTypeWriter.html",
+          "hash": "99kVS8VkZXFyxTJXHyaZ4hHXXtqmaaCdDQ6H3rKDf7k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.BoolTypeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.BoolTypeWriter.html",
+          "hash": "9XVlqxYF8IMJM5CECe1ptyPOn6AJ7qb9mwbISXQbjLA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.CustomTypeWriters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.CustomTypeWriters.html",
+          "hash": "yywW0ecmzSZyVN2qRMkEcLLQN5RlR3KQbXTBE6c5tSw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.DoubleTypeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.DoubleTypeWriter.html",
+          "hash": "zA9DlqLDAlhiENHDW1SYk6QHvESWWthh8PCyOg55dvY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.FloatTypeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.FloatTypeWriter.html",
+          "hash": "ZJYlACCaTs3kj55IZZPcysSoLmVWBGoWPYGptXCLCfE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.IntTypeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.IntTypeWriter.html",
+          "hash": "mT7wB7BYe+iCLzAJjcMBvJnZ8C2Vd3mtAT9OoPH8ieo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.LongTypeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.LongTypeWriter.html",
+          "hash": "xgiFKEabyD77g9OZLzpe3s76Yh6JdCtrmLW656URkdg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.StringTypeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.StringTypeWriter.html",
+          "hash": "5P8yN9LQckwW0BrJeuXhmnL3xbLTHPE9xntyVRY70Hc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.Vector2IntTypeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.Vector2IntTypeWriter.html",
+          "hash": "jL2xCo0/qyr6zn3NZaYLKdBmYDHRz6YWTueMe6Nxc7c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.Vector2TypeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.Vector2TypeWriter.html",
+          "hash": "0JJMj74jDB3aH86ADmYhc8MRiHNUhZKgiU9/9RIiVeI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.Vector3IntTypeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.Vector3IntTypeWriter.html",
+          "hash": "5fBsVM6ixv/pf1DZ1A+/V3QL8Cuo6TpI3UCA/ygZOoU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.Vector3TypeWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.Vector3TypeWriter.html",
+          "hash": "DSG+QJJKP77nEY9TpqpzUd+h8LV0vZctEQp8pnZ9qnY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.TypeWriters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.TypeWriters.html",
+          "hash": "MkXlxDUpNxXj2FyJ6N16+trQklO+YyZBpSN6lY50Smg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.html",
+          "hash": "ErKJPh9Izv9XL1syM5PWA2pJ/d5wvItMajumozy66CI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "lVCPgKeQAewAOfsMxtTD3QThlL9Uv3j1XprctnKfgrQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "NduO9bue9aau2/mbvD9N1NZ5BFAUbw71vnmcbocbC+0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/coniunctis.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/coniunctis.html",
+          "hash": "REzLBFU2fD2/TScIMOq8pvZ9QscEDWoUo+0rF5AoLVM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/etiam.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/etiam.html",
+          "hash": "rCNj7LD3V88u0HrtdurTnZB65n29V/MsCFBRJe6mhsE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "manual/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html",
+          "hash": "rP+c9KPLMLO+q5u7rC7ci/iMYXqbmZC8g5PeGCEXGU4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleManual.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleManual.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleScriptingApi.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleScriptingApi.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "4qUUVRMrpfUCFnLScLmMP/nC/0AN2WcsiycTLUKIZNE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 25,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
