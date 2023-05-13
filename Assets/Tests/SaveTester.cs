@@ -33,6 +33,7 @@ public class ClassB
 
 public class SaveTester : MonoBehaviour
 {
+    /*
     [SerializeField] private string path;
     private async void Start()
     {
@@ -55,6 +56,7 @@ public class SaveTester : MonoBehaviour
         Debug.Log(feature);
         Debug.Log(feature.Value);
     }
+    */
 
 
 }

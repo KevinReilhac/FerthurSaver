@@ -1,0 +1,12 @@
+using UnityEngine;
+
+namespace FerthurSaver.Tests
+{
+    internal class #NAME# : baseSaveTester
+    {
+        public override void Setup()
+        {
+            Save.Initialize(Application.persistentDataPath, ...);
+        }
+    }
+}

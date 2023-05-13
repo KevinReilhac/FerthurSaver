@@ -33,6 +33,11 @@ namespace FerthurSaver
             public Feature Feature;
         }
 
+        public void Clear()
+        {
+            _dictSaveData.Clear();
+        }
+
         [SerializeField] private List<SerializedCategoryItem> serializedCategories = new List<SerializedCategoryItem>();
 
         public void OnBeforeSerialize()

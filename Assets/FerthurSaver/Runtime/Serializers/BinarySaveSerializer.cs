@@ -4,9 +4,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
 
 namespace FerthurSaver
 {
+    [Obsolete("Not work for now")]
     public class BinarySaveSerializer : ISaveSerializer
     {
         private BinaryFormatter _binaryFormatter = null;
