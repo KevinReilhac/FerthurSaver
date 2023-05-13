@@ -1,0 +1,22 @@
+{
+    "name": "FerthurSaverEditorTests",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c5b44a7ce2f2b4541958dabdd5ae43df",
+        "GUID:f934be5487fa8424ea495bbfd30646ac"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
