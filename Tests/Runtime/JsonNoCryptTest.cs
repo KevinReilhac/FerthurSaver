@@ -1,14 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
 
-public class JsonNoCryptTest
+namespace FerthurSaver.Tests
 {
-    [Test]
-    public void GameObject_CreatedWithGiven_WillHaveTheName()
+    internal class JsonNoCryptTest : baseSaveTester
     {
-        var go = new GameObject("MyGameObject");
-        Assert.AreEqual("MyGameObject", go.name);
+        public override void Setup()
+        {
+            Save.DisplayDebug = true;
+            Save.Initialize(Application.persistentDataPath, new JsonUtilitySaveSerializer(), null);
+        }
+
     }
 }

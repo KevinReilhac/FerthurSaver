@@ -25,13 +25,15 @@ namespace FerthurSaver
         private static bool _isInitialized;
         private static string _filePath;
 
-        public static event FeatureUpdatedEvent OnFeatureUpdated;
-        public static event Action onWriteStart;
-        public static event Action onWriteComplete;
-        public static event Action onReadStart;
-        public static event Action onReadComplete;
+        public static bool DisplayDebug = true;
 
-        public static void Initialize(string[] categories, string filePath, ISaveSerializer saveSerializer, ISaveEncryptor saveEncryptor = null)
+        public static event FeatureUpdatedEvent OnFeatureUpdated;
+        public static event Action onWriteAsyncStart;
+        public static event Action onWriteAsyncComplete;
+        public static event Action onReadAsyncStart;
+        public static event Action onReadAsyncComplete;
+
+        public static void Initialize(string filePath, ISaveSerializer saveSerializer, ISaveEncryptor saveEncryptor = null, params string[] categories)
         {
             _saveData = new SaveData();
             _saveData.AddCategory(DEFAULT_CATEGORY);
@@ -141,7 +143,7 @@ namespace FerthurSaver
                 List<Feature> categoryFeatures = new List<Feature>();
 
                 foreach (Feature feature in categoryDict.Values)
-                        categoryFeatures.Add(feature);
+                    categoryFeatures.Add(feature);
                 return (categoryFeatures);
             }
             else
@@ -245,34 +247,108 @@ namespace FerthurSaver
         /// </summary>
         /// <param name="saveName"> save file name </param>
         /// <returns></returns>
-        public static async Task WriteSave(string saveName)
+        public static async Task WriteSaveAsync(string saveName)
         {
             string fullPath = GetFullFilePath(saveName);
 
-            onWriteStart?.Invoke();
-            byte[] serializedSave = _saveSerializer.Serialize(_saveData);
-            if (_saveEncryptor != null)
-                serializedSave = _saveEncryptor.Encrypt(serializedSave);
-            await File.WriteAllBytesAsync(fullPath, serializedSave);
-            onWriteComplete?.Invoke();
-            Debug.LogFormat("Write save at {0}", fullPath);
+            onWriteAsyncStart?.Invoke();
+            await Task.Run(async () =>
+            {
+                byte[] serializedSave = _saveSerializer.Serialize(_saveData);
+                if (_saveEncryptor != null)
+                    serializedSave = _saveEncryptor.Encrypt(serializedSave);
+                await File.WriteAllBytesAsync(fullPath, serializedSave);
+                onWriteAsyncComplete?.Invoke();
+            });
+            DebugLogFormat("Write save at {0}", fullPath);
         }
 
         /// <summary>
         /// Read save to a file
         /// </summary>
         /// <param name="saveName"> save file name </param>
-        public static async Task ReadSave(string saveName)
+        public static async Task ReadSaveAsync(string saveName)
         {
             string fullPath = GetFullFilePath(saveName);
 
-            onReadStart?.Invoke();
-            byte[] serializedSave = await File.ReadAllBytesAsync(fullPath);
+            onReadAsyncStart?.Invoke();
+            await Task.Run(async () =>
+            {
+                byte[] serializedSave = await File.ReadAllBytesAsync(fullPath);
+                if (_saveEncryptor != null)
+                    serializedSave = _saveEncryptor.Decript(serializedSave);
+                _saveData = _saveSerializer.Deserialize(serializedSave);
+                onReadAsyncComplete?.Invoke();
+
+            });
+            DebugLogFormat("Save loaded from {0}", fullPath);
+        }
+
+        /// <summary>
+        /// Write save to a file
+        /// </summary>
+        /// <param name="saveName"> save file name </param>
+        /// <returns></returns>
+        public static void WriteSave(string saveName)
+        {
+            string fullPath = GetFullFilePath(saveName);
+
+            onWriteAsyncStart?.Invoke();
+            byte[] serializedSave = _saveSerializer.Serialize(_saveData);
+            if (_saveEncryptor != null)
+                serializedSave = _saveEncryptor.Encrypt(serializedSave);
+            File.WriteAllBytes(fullPath, serializedSave);
+            onWriteAsyncComplete?.Invoke();
+            DebugLogFormat("Write save at {0}", fullPath);
+        }
+
+        /// <summary>
+        /// Read save to a file
+        /// </summary>
+        /// <param name="saveName"> save file name </param>
+        public static void ReadSave(string saveName)
+        {
+            string fullPath = GetFullFilePath(saveName);
+
+            onReadAsyncStart?.Invoke();
+            byte[] serializedSave = File.ReadAllBytes(fullPath);
             if (_saveEncryptor != null)
                 serializedSave = _saveEncryptor.Decript(serializedSave);
             _saveData = _saveSerializer.Deserialize(serializedSave);
-            onReadComplete?.Invoke();
-            Debug.LogFormat("Save loaded from {0}", fullPath);
+            onReadAsyncComplete?.Invoke();
+            DebugLogFormat("Save loaded from {0}", fullPath);
+        }
+
+        private static void DebugLog(string message)
+        {
+            if (!DisplayDebug)
+                return;
+
+            StringBuilder builder = new StringBuilder();
+
+            builder.Append("☭ FerthurSaver ☭ : ");
+            builder.Append(message);
+            Debug.Log(builder.ToString());
+        }
+
+        private static void DebugLogFormat(string message, params object[] obj)
+        {
+            if (!DisplayDebug)
+                return;
+
+            DebugLog(string.Format(message, obj));
+        }
+
+        public static void DestroySave(string saveName)
+        {
+            string fullPath = GetFullFilePath(saveName);
+
+            File.Delete(fullPath);
+        }
+
+        public static void ClearSave()
+        {
+            _saveData.Clear();
         }
 
         private static string GetFullFilePath(string saveName)
