@@ -14,13 +14,13 @@ jobs:
         echo "Assets/FerthurSaver.meta" > metaList
         find Assets/FerthurSaver/ -name \*.meta >> metaList
 
-    - run: mkdir ${GITHUB_REF#refs/tags/v}
+    - run: mkdir a
 
     - uses: pCYSl5EDgo/create-unitypackage@master
       with:
-        package-path: '{${GITHUB_REF#refs/tags/v}/output.unitypackage'
+        package-path: 'a/output.unitypackage'
         include-files: metaList
     - uses: actions/upload-artifact@master
       with:
-        path: ${GITHUB_REF#refs/tags/v}
-        name: FerthurSaver
+        path: a
+        name: package
