@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SideRift.SaveSystem
+namespace FerthurSaver
 {
     public class CategoryDict : Dictionary<string, Feature>
     {

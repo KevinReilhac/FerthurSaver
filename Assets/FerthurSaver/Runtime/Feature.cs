@@ -9,9 +9,9 @@ using UnityEngine;
 using Newtonsoft.Json;
 using System.IO;
 using System.Text;
-using SideRift.SaveSystem.TypeWriters;
+using FerthurSaver.TypeWriters;
 
-namespace SideRift.SaveSystem
+namespace FerthurSaver
 {
     [System.Serializable]
     public class Feature : ISerializationCallbackReceiver

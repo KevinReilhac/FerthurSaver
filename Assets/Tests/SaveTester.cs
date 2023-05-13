@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SideRift.SaveSystem;
+using FerthurSaver;
 
 [System.Serializable]
 public class ClassA : ISaveItem

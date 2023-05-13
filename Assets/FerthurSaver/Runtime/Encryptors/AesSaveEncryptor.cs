@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 using System.Text;
 using UnityEngine;
 
-namespace SideRift.SaveSystem
+namespace FerthurSaver
 {
     public class AesSaveEncryptor : ISaveEncryptor
     {

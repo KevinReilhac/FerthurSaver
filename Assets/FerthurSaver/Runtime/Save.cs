@@ -9,7 +9,7 @@ using UnityEngine;
 using System;
 using System.Threading.Tasks;
 
-namespace SideRift.SaveSystem
+namespace FerthurSaver
 {
     public delegate void FeatureUpdatedEvent(string key, string value, Feature feature);
 

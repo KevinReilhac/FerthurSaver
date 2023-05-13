@@ -1,0 +1,16 @@
+{
+    "name": "FerthurSaverEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f934be5487fa8424ea495bbfd30646ac"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

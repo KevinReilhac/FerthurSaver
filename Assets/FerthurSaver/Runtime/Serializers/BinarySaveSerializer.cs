@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-namespace SideRift.SaveSystem
+namespace FerthurSaver
 {
     public class BinarySaveSerializer : ISaveSerializer
     {

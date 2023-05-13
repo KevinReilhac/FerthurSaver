@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace SideRift.SaveSystem
+namespace FerthurSaver
 {
     public partial class SaveData : ISerializationCallbackReceiver
     {

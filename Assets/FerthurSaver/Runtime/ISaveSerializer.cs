@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace SideRift.SaveSystem
+namespace FerthurSaver
 {
     public interface ISaveSerializer
     {
