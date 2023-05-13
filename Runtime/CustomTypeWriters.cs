@@ -18,6 +18,7 @@ namespace FerthurSaver.TypeWriters
             AddCustomWriter(new DoubleTypeWriter());
             AddCustomWriter(new LongTypeWriter());
             AddCustomWriter(new BoolTypeWriter());
+            AddCustomWriter(new StringTypeWriter());
             
             AddCustomWriter(new Vector3TypeWriter());
             AddCustomWriter(new Vector3IntTypeWriter());

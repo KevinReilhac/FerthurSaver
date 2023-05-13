@@ -80,4 +80,19 @@ namespace FerthurSaver.TypeWriters
 
         public override Type Type => typeof(bool);
     }
+
+        public class StringTypeWriter : ACustomTypeWriter
+    {
+        public override object FromText(string text)
+        {
+            return (text);
+        }
+
+        public override string ToText(object value)
+        {
+            return (value as string);
+        }
+
+        public override Type Type => typeof(string);
+    }
 }
