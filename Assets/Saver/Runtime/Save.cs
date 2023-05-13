@@ -11,9 +11,6 @@ using System.Threading.Tasks;
 
 namespace SideRift.SaveSystem
 {
-    [Serializable] public class FeaturesDict : SerializableDictionary<string, Feature>{}
-    [Serializable] public class SaveData : SerializableDictionary<string, FeaturesDict>{}
-
     public delegate void FeatureUpdatedEvent(string key, string value, Feature feature);
 
     public static class Save
@@ -24,6 +21,7 @@ namespace SideRift.SaveSystem
 
         private static SaveData _saveData;
         private static ISaveSerializer _saveSerializer;
+        private static ISaveEncryptor _saveEncryptor;
         private static bool _isInitialized;
         private static string _filePath;
 
@@ -33,19 +31,12 @@ namespace SideRift.SaveSystem
         public static event Action onReadStart;
         public static event Action onReadComplete;
 
-        public static void Initialize(string[] categories, string filePath, ISaveSerializer saveSerializer)
+        public static void Initialize(string[] categories, string filePath, ISaveSerializer saveSerializer, ISaveEncryptor saveEncryptor = null)
         {
             _saveData = new SaveData();
-            _saveData.Add(DEFAULT_CATEGORY, new FeaturesDict());
+            _saveData.AddCategory(DEFAULT_CATEGORY);
             _saveSerializer = saveSerializer;
-            for (int i = 0; i < categories.Length; i++)
-            {
-                if (!_saveData.ContainsKey(categories[i]))
-                {
-                _saveData.Add(categories[i], new FeaturesDict());
-                }
-            }
-
+            _saveEncryptor = saveEncryptor;
             _filePath = filePath;
             _isInitialized = true;
         }
@@ -67,7 +58,7 @@ namespace SideRift.SaveSystem
             }
 
             //Check if this category exist or return default value 
-            if (!_saveData.TryGetValue(category, out var categoryDict))
+            if (!_saveData.TryGetCategory(category, out var categoryDict))
             {
                 Debug.LogErrorFormat("{0} category not exist", category);
                 return new Feature<T>(defaultValue);
@@ -114,7 +105,7 @@ namespace SideRift.SaveSystem
                 return (null);
             }
 
-            if (!_saveData.TryGetValue(category, out var categoryDict))
+            if (!_saveData.TryGetCategory(category, out var categoryDict))
             {
                 List<Feature<T>> categoryFeatures = new List<Feature<T>>();
 
@@ -145,7 +136,7 @@ namespace SideRift.SaveSystem
                 return (null);
             }
 
-            if (!_saveData.TryGetValue(category, out var categoryDict))
+            if (!_saveData.TryGetCategory(category, out var categoryDict))
             {
                 List<Feature> categoryFeatures = new List<Feature>();
 
@@ -178,7 +169,7 @@ namespace SideRift.SaveSystem
             }
 
             //Check if this category exist or return default value 
-            if (!_saveData.TryGetValue(category, out var categoryDict))
+            if (!_saveData.TryGetCategory(category, out var categoryDict))
             {
                 Debug.LogErrorFormat("{0} category not exist", category);
                 return new Feature<T>();
@@ -231,7 +222,7 @@ namespace SideRift.SaveSystem
             }
 
             //Check if this category exist or return default value 
-            if (!_saveData.TryGetValue(category, out var categoryDict))
+            if (!_saveData.TryGetCategory(category, out var categoryDict))
             {
                 Debug.LogErrorFormat("{0} category not exist.", category);
                 return new Feature<T>();
@@ -249,21 +240,37 @@ namespace SideRift.SaveSystem
             return (newFeature);
         }
 
+        /// <summary>
+        /// Write save to a file
+        /// </summary>
+        /// <param name="saveName"> save file name </param>
+        /// <returns></returns>
         public static async Task WriteSave(string saveName)
         {
             string fullPath = GetFullFilePath(saveName);
+
             onWriteStart?.Invoke();
-            await _saveSerializer.Write(_saveData, fullPath);
+            byte[] serializedSave = _saveSerializer.Serialize(_saveData);
+            if (_saveEncryptor != null)
+                serializedSave = _saveEncryptor.Encrypt(serializedSave);
+            await File.WriteAllBytesAsync(fullPath, serializedSave);
             onWriteComplete?.Invoke();
             Debug.LogFormat("Write save at {0}", fullPath);
         }
 
+        /// <summary>
+        /// Read save to a file
+        /// </summary>
+        /// <param name="saveName"> save file name </param>
         public static async Task ReadSave(string saveName)
         {
             string fullPath = GetFullFilePath(saveName);
 
             onReadStart?.Invoke();
-            _saveData = await _saveSerializer.Read(fullPath);
+            byte[] serializedSave = await File.ReadAllBytesAsync(fullPath);
+            if (_saveEncryptor != null)
+                serializedSave = _saveEncryptor.Decript(serializedSave);
+            _saveData = _saveSerializer.Deserialize(serializedSave);
             onReadComplete?.Invoke();
             Debug.LogFormat("Save loaded from {0}", fullPath);
         }

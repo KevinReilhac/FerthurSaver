@@ -6,11 +6,21 @@ using UnityEngine;
 using SideRift.SaveSystem;
 
 [System.Serializable]
-public class ClassA
+public class ClassA : ISaveItem
 {
     public ClassB b = new ClassB();
     public int test = -444;
     [SerializeField] public Guid guid = Guid.NewGuid();
+
+    public static object FromSaveText(string stringData)
+    {
+        return JsonUtility.FromJson<ClassA>(stringData);
+    }
+
+    public string ToSaveText()
+    {
+        return (JsonUtility.ToJson(this));
+    }
 }
 
 [System.Serializable]
@@ -26,7 +36,7 @@ public class SaveTester : MonoBehaviour
     [SerializeField] private string path;
     private async void Start()
     {
-        Save.Initialize(new string[] {}, path, new JsonUtilitySaveSerializer());
+        Save.Initialize(new string[] {}, path, new JsonUtilitySaveSerializer(prettyPrint: true));
 
         Save.AddFeature<int>("Integer", 666);
         Save.AddFeature<int>("Integer_2", 123);

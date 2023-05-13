@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.Runtime.CompilerServices;
@@ -8,6 +9,7 @@ using UnityEngine;
 using Newtonsoft.Json;
 using System.IO;
 using System.Text;
+using SideRift.SaveSystem.TypeWriters;
 
 namespace SideRift.SaveSystem
 {
@@ -27,22 +29,84 @@ namespace SideRift.SaveSystem
 
         public void OnBeforeSerialize()
         {
-            byte[] bytesValue = BinaryUtilities.ToByteArray(value);
-            serializedValue = BinaryUtilities.ByteArrayToString(bytesValue);
             serializedType = valueType.AssemblyQualifiedName;
+            if (TryGetValueAsText(out string valueAsText))
+            {
+                serializedValue = valueAsText;
+            }
+            else
+            {
+                byte[] bytesValue = BinaryUtilities.ToByteArray(value);
+                serializedValue = BinaryUtilities.ByteArrayToString(bytesValue);
+            }
         }
 
         public void OnAfterDeserialize()
         {
-            byte[] bytesValue = BinaryUtilities.StringToByteArray(serializedValue);
-            value = BinaryUtilities.FromByteArray<object>(bytesValue);
             valueType = Type.GetType(serializedType);
+
+            if (TryGetValueFromText(serializedValue, out object readedValue))
+            {
+                value = readedValue;
+            }
+            else
+            {
+                byte[] bytesValue = BinaryUtilities.StringToByteArray(serializedValue);
+                value = BinaryUtilities.FromByteArray<object>(bytesValue);
+            }
         }
 
+        private bool TryGetValueAsText(out string text)
+        {
+            if (CustomTypeWriters.TryGetCustomTypeWriter(valueType, out ACustomTypeWriter writer))
+            {
+                text = writer.ToText(value);
+                return (true);
+            }
+
+            if (value is ISaveItem saveItemValue)
+            {
+                text = saveItemValue.ToSaveText();
+                return (true);
+            }
+
+            text = null;
+            return (false);
+        }
+
+        private bool TryGetValueFromText(string text, out object value)
+        {
+            if (CustomTypeWriters.TryGetCustomTypeWriter(valueType, out ACustomTypeWriter writer))
+            {
+                value = writer.FromText(text);
+                return (true);
+            }
+
+            if (TestType<ISaveItem>())
+            {
+                value = valueType.GetMethod("FromSaveText").Invoke(null, new object[] {text});
+                return (true);
+            }
+
+            value = null;
+            return (false);
+        }
 
         public bool TestType<T>()
         {
-            return valueType == typeof(T);
+            return typeof(T).IsAssignableFrom(valueType);
+        }
+
+        public bool TestType<T>(out T typedValue)
+        {
+            if (typeof(T).IsAssignableFrom(valueType))
+            {
+                typedValue = (T)value;
+                return (true);
+            }
+
+            typedValue = default(T);
+            return (false);
         }
     }
 
@@ -68,12 +132,11 @@ namespace SideRift.SaveSystem
 
         public T GetValue()
         {
-            if (_feature.value is T typedValue)
+            if (_feature.TestType<T>(out T typedValue))
             {
                 return (typedValue);
             }
 
-            Debug.LogErrorFormat("{0} is the wrong type for this feature.", typeof(T).Name);
             return default(T);
         }
 

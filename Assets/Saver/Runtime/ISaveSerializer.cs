@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ namespace SideRift.SaveSystem
 {
     public interface ISaveSerializer
     {
-        Task Write(SaveData saveData, string fullFilePath);
-        Task<SaveData> Read(string fullFilePath);
+        byte[] Serialize(SaveData saveData);
+        SaveData Deserialize(byte[] bytes);
     }
 }
