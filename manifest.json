@@ -40,7 +40,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.BinarySaveSerializer.html",
-          "hash": "xZ6UvJJnq0IpTVJL9xSVh/PVJKy4W4S7rDyH5v8Hcmo="
+          "hash": "u03hK09ugDVyN817VPcffvDH+nTL5PJ7j0soLBQsqZw="
         }
       },
       "is_incremental": false,
@@ -100,7 +100,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.ISaveItem.html",
-          "hash": "0Ezybzhp9jUok5rj4dlDfyOujyiAaSdrlarvkrxawyA="
+          "hash": "hQdepj4+5+uUcK22FkqN3LBQRWqMNRcYjEsIlR/TXd4="
         }
       },
       "is_incremental": false,
@@ -112,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.ISaveSerializer.html",
-          "hash": "+6+W88zb3H9w1JZdIt0LhgYeIqQFtsjvyYTXOpE6Gg0="
+          "hash": "7G/5iQMEIfgDhxvJnxm0IH+4eaFexi5KtKlf7Yoy61Q="
         }
       },
       "is_incremental": false,
@@ -124,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.JsonUtilitySaveSerializer.html",
-          "hash": "8Uw6dAAcw1cPWv/xqxwEiuGeJrZbT8vV90tQlni+W2w="
+          "hash": "1kAnw5/14Nue7Oep3g9UslbturOaUIWzGX8zJmpd0i4="
         }
       },
       "is_incremental": false,
@@ -136,7 +136,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.Save.html",
-          "hash": "mD163NpVo3mIysU6UFaxcRc7c6iU9hWSvUHUdLaE+0o="
+          "hash": "ilnYJMi7PdZDUHYLbgiXkrVdvgHaclR0dY6U04RWPdE="
         }
       },
       "is_incremental": false,
@@ -148,7 +148,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.SaveData.html",
-          "hash": "NTPhvG6gMK5zcq7dBMnxuyB7Nj+fclkAlVusvQuslzI="
+          "hash": "yTmZlludc0Cep6oZHfE1LmpUEZR03giAo2Lhff+7bDo="
         }
       },
       "is_incremental": false,
@@ -316,7 +316,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.html",
-          "hash": "ErKJPh9Izv9XL1syM5PWA2pJ/d5wvItMajumozy66CI="
+          "hash": "YAMWb+lq2HhSaeNMBRjWZEovFKySd7tZpMOoXzRVhLA="
         }
       },
       "is_incremental": false,
