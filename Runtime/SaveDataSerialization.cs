@@ -57,7 +57,6 @@ namespace FerthurSaver
         public void OnAfterDeserialize()
         {
             _dictSaveData = new Dictionary<string, CategoryDict>();
-
             foreach (SerializedCategoryItem categoryItem in serializedCategories)
             {
                 foreach (SerializedFeatureItem featureItem in categoryItem.Features)

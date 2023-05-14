@@ -41,6 +41,7 @@ namespace FerthurSaver
             _saveEncryptor = saveEncryptor;
             _filePath = filePath;
             _isInitialized = true;
+            DebugLogFormat("Initialize with {0} and {1}", saveEncryptor != null ? saveEncryptor.GetType().Name : "null", saveSerializer != null ? saveSerializer.GetType().Name : "null");
         }
 
         /// <summary>
@@ -69,14 +70,17 @@ namespace FerthurSaver
             //Check if this key exist or return default value 
             if (categoryDict.TryGetValue(key, out var result))
             {
-                return (new Feature<T>(result));
+                if (result.TestType<T>())
+                    return (new Feature<T>(result));
+                Debug.LogErrorFormat("{0} item has wrong type.", key);
+                return new Feature<T>(defaultValue);
             }
             else
             {
                 if (createIfNotExist)
                 {
                     //Add new feature in dict
-                    AddFeature<T>(key, defaultValue, category);
+                    return AddFeature<T>(key, defaultValue, category);
                 }
                 else
                 {
@@ -85,12 +89,6 @@ namespace FerthurSaver
                 }
             }
 
-            //Try to return result with good type
-            if (result.TestType<T>())
-                return (new Feature<T>(result));
-
-            Debug.LogErrorFormat("{0} item has wrong type.", key);
-            return new Feature<T>(defaultValue);
         }
 
         /// <summary>

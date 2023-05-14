@@ -8,7 +8,6 @@ using System;
 
 namespace FerthurSaver
 {
-    [Obsolete("Not work for now")]
     public class BinarySaveSerializer : ISaveSerializer
     {
         private BinaryFormatter _binaryFormatter = null;
@@ -24,6 +23,8 @@ namespace FerthurSaver
             using (MemoryStream ms = new MemoryStream(bytes))
             {
                 object obj = bf.Deserialize(ms);
+                SaveData saveData = obj as SaveData;
+                saveData.OnAfterDeserialize();
                 return (SaveData)obj;
             }
         }
@@ -36,6 +37,7 @@ namespace FerthurSaver
             BinaryFormatter bf = new BinaryFormatter();
             using (MemoryStream ms = new MemoryStream())
             {
+                saveData.OnBeforeSerialize();
                 bf.Serialize(ms, saveData);
                 return ms.ToArray();
             }
