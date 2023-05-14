@@ -8,6 +8,9 @@ using System;
 
 namespace FerthurSaver
 {
+    /// <summary>
+    /// Serialize your save to binary file
+    /// </summary>
     public class BinarySaveSerializer : ISaveSerializer
     {
         private BinaryFormatter _binaryFormatter = null;

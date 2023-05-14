@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace FerthurSaver
 {
+    /// <summary>
+    /// Serialize your save to json file
+    /// </summary>
     public class JsonUtilitySaveSerializer : ISaveSerializer
     {
         private  bool _prettyPrint = false;

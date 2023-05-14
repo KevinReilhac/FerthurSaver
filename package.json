@@ -1,11 +1,11 @@
 {
     "name": "com.kebab.ferthur_saver",
-    "version": "0.0.1",
+    "version": "0.0.12",
     "displayName": "Ferthur Saver",
     "description": "This is generic save file system",
     "unity": "2019.1",
     "unityRelease": "0b5",
-    "documentationUrl": "",
+    "documentationUrl": "https://kevinreilhac.github.io/FerthurSaver/",
     "changelogUrl": "",
     "licensesUrl": "",
     "dependencies": {},
