@@ -58,12 +58,19 @@ Debug.Log(intFeature.Value); // -> "666"
 ```csharp
     Save.WriteSave("SaveName");
     Save.ReadSave("SaveName");
-    
+
     //OR
     await Save.WriteSaveAsync("SaveName");
     await Save.ReadSaveAsync("SaveName");
 
     //Events
     Save.onWriteAsyncStart += Stuff();
-    Save.onWriteAsyncComplete += AnotherKindOfStuff();
+    Save.onWriteAsyncComplete += OtherStuff();
 ```
+## Documentation
+
+[Read Documentation](https://kevinreilhac.github.io/FerthurSaver/)
+____________________
+
+
+I am not responsible for any use of this module, find a better one.
