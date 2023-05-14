@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
+/// <summary>
+/// Enryptor base class
+/// </summary>
 public interface ISaveEncryptor
 {
     byte[] Encrypt(byte[] bytes);

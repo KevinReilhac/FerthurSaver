@@ -10,6 +10,9 @@ namespace FerthurSaver
 
     }
 
+    /// <summary>
+    /// Serialized data class
+    /// </summary>
     [Serializable]
     public partial class SaveData
     {

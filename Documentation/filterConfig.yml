@@ -3,5 +3,8 @@ apiRules:
     uidRegex: ^FerthurSaver
     type: Namespace
 - exclude:
+    uidRegex: ^FerthurSaver.TypeWriters
+    type: Namespace
+- exclude:
     uidRegex: .*
     type: Namespace

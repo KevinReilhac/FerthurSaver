@@ -33,6 +33,13 @@ namespace FerthurSaver
         public static event Action onReadAsyncStart;
         public static event Action onReadAsyncComplete;
 
+        /// <summary>
+        /// Initialize Save system
+        /// </summary>
+        /// <param name="filePath"> Save files path </param>
+        /// <param name="saveSerializer"> Type of serializer JSON/Binary etc. </param>
+        /// <param name="saveEncryptor"> Type of encryptor, null for no encryption </param>
+        /// <param name="categories">Features custom categories</param>
         public static void Initialize(string filePath, ISaveSerializer saveSerializer, ISaveEncryptor saveEncryptor = null, params string[] categories)
         {
             _saveData = new SaveData();
@@ -44,6 +51,7 @@ namespace FerthurSaver
             DebugLogFormat("Initialize with {0} and {1}", saveEncryptor != null ? saveEncryptor.GetType().Name : "null", saveSerializer != null ? saveSerializer.GetType().Name : "null");
         }
 
+        #region Features Controlls
         /// <summary>
         /// Get a feature
         /// </summary>
@@ -91,6 +99,103 @@ namespace FerthurSaver
 
         }
 
+        /// <summary>
+        /// Set a feature
+        /// </summary>
+        /// <param name="key">the key of the feature to set</param>
+        /// <param name="value">value to set</param>
+        /// <param name="category">Feature category</param>
+        /// <param name="createIfNotExist">Create the Feature if it not exist (true by default)</param>
+        /// <typeparam name="T">Value Type</typeparam>
+        /// <returns> Defined feature </returns>
+        public static Feature<T> Set<T>(string key, T value, string category = DEFAULT_CATEGORY, bool createIfNotExist = true)
+        {
+            if (!_isInitialized)
+            {
+                Debug.LogError(NOT_INITILIZED_MESSAGE);
+                return (new Feature<T>());
+            }
+
+            //Check if this category exist or return default value 
+            if (!_saveData.TryGetCategory(category, out var categoryDict))
+            {
+                Debug.LogErrorFormat("{0} category not exist", category);
+                return new Feature<T>();
+            }
+
+            //Check if this key exist
+            if (categoryDict.TryGetValue(key, out Feature result))
+                return CheckResultType<T>(key, value, category, result);
+            else
+                return CheckCreateIfNotExist(key, value, category, createIfNotExist);
+        }
+
+        private static Feature<T> CheckCreateIfNotExist<T>(string key, T value, string category, bool createIfNotExist)
+        {
+            if (createIfNotExist)
+            {
+                return AddFeature<T>(key, value, category);
+            }
+            else
+            {
+                Debug.LogErrorFormat("{0} key not exist.", key);
+                return (new Feature<T>());
+            }
+        }
+
+        private static Feature<T> CheckResultType<T>(string key, T value, string category, Feature result)
+        {
+            //Check if the value has the same type than the Feature at this key
+            if (result.TestType<T>())
+            {
+                (result as Feature<T>).Value = value;
+                OnFeatureUpdated?.Invoke(key, category, result);
+                return (result as Feature<T>);
+            }
+            else
+            {
+                Debug.LogErrorFormat("Type mismatch on set {0}/{1} value", category, key);
+                return (new Feature<T>());
+            }
+        }
+
+        /// <summary>
+        /// Add feature in save
+        /// </summary>
+        /// <param name="key">The key of the feature to set</param>
+        /// <param name="value">default feature value</param>
+        /// <param name="category">Feature category</param>
+        /// <typeparam name="T">Value Type</typeparam>
+        /// <returns>Created feature</returns>
+        public static Feature<T> AddFeature<T>(string key, T value, string category = "default")
+        {
+            if (!_isInitialized)
+            {
+                Debug.LogError(NOT_INITILIZED_MESSAGE);
+                return (new Feature<T>());
+            }
+
+            //Check if this category exist or return default value 
+            if (!_saveData.TryGetCategory(category, out var categoryDict))
+            {
+                Debug.LogErrorFormat("{0} category not exist.", category);
+                return new Feature<T>();
+            }
+
+            if (categoryDict.ContainsKey(key))
+            {
+                Debug.LogErrorFormat("{0}/{1} Feature already exist", category, key);
+                return (new Feature<T>());
+            }
+
+            Feature<T> newFeature = new Feature<T>(value);
+            categoryDict.Add(key, newFeature);
+            OnFeatureUpdated?.Invoke(key, category, newFeature);
+            return (newFeature);
+        }
+        #endregion //Features controlls
+
+        #region Categories
         /// <summary>
         /// Get all features of a type in a category
         /// </summary>
@@ -150,101 +255,13 @@ namespace FerthurSaver
                 return (null);
             }
         }
+        #endregion //Controlls
 
-        /// <summary>
-        /// Set a feature
-        /// </summary>
-        /// <param name="key">the key of the feature to set</param>
-        /// <param name="value">value to set</param>
-        /// <param name="category">Feature category</param>
-        /// <param name="createIfNotExist">Create the Feature if it not exist (true by default)</param>
-        /// <typeparam name="T">Value Type</typeparam>
-        /// <returns> Defined feature </returns>
-        public static Feature<T> Set<T>(string key, T value, string category = DEFAULT_CATEGORY, bool createIfNotExist = true)
-        {
-            if (!_isInitialized)
-            {
-                Debug.LogError(NOT_INITILIZED_MESSAGE);
-                return (new Feature<T>());
-            }
-
-            //Check if this category exist or return default value 
-            if (!_saveData.TryGetCategory(category, out var categoryDict))
-            {
-                Debug.LogErrorFormat("{0} category not exist", category);
-                return new Feature<T>();
-            }
-
-            //Check if this key exist
-            if (categoryDict.TryGetValue(key, out Feature result))
-            {
-                //Check if the value has the same type than the Feature at this key
-                if (result.TestType<T>())
-                {
-                    (result as Feature<T>).Value = value;
-                    OnFeatureUpdated?.Invoke(key, category, result);
-                    return (result as Feature<T>);
-                }
-                else
-                {
-                    Debug.LogErrorFormat("Type mismatch on set {0}/{1} value", category, key);
-                    return (new Feature<T>());
-                }
-            }
-            else
-            {
-                if (createIfNotExist)
-                {
-                    return AddFeature<T>(key, value, category);
-                }
-                else
-                {
-                    Debug.LogErrorFormat("{0} key not exist.", key);
-                    return (new Feature<T>());
-                }
-            }
-        }
-
-        /// <summary>
-        /// Add feature in save
-        /// </summary>
-        /// <param name="key">The key of the feature to set</param>
-        /// <param name="value">default feature value</param>
-        /// <param name="category">Feature category</param>
-        /// <typeparam name="T">Value Type</typeparam>
-        /// <returns>Created feature</returns>
-        public static Feature<T> AddFeature<T>(string key, T value, string category = "default")
-        {
-            if (!_isInitialized)
-            {
-                Debug.LogError(NOT_INITILIZED_MESSAGE);
-                return (new Feature<T>());
-            }
-
-            //Check if this category exist or return default value 
-            if (!_saveData.TryGetCategory(category, out var categoryDict))
-            {
-                Debug.LogErrorFormat("{0} category not exist.", category);
-                return new Feature<T>();
-            }
-
-            if (categoryDict.ContainsKey(key))
-            {
-                Debug.LogErrorFormat("{0}/{1} Feature already exist", category, key);
-                return (new Feature<T>());
-            }
-
-            Feature<T> newFeature = new Feature<T>(value);
-            categoryDict.Add(key, newFeature);
-            OnFeatureUpdated?.Invoke(key, category, newFeature);
-            return (newFeature);
-        }
-
+        #region Read/Write
         /// <summary>
         /// Write save to a file
         /// </summary>
         /// <param name="saveName"> save file name </param>
-        /// <returns></returns>
         public static async Task WriteSaveAsync(string saveName)
         {
             string fullPath = GetFullFilePath(saveName);
@@ -286,7 +303,6 @@ namespace FerthurSaver
         /// Write save to a file
         /// </summary>
         /// <param name="saveName"> save file name </param>
-        /// <returns></returns>
         public static void WriteSave(string saveName)
         {
             string fullPath = GetFullFilePath(saveName);
@@ -316,7 +332,9 @@ namespace FerthurSaver
             onReadAsyncComplete?.Invoke();
             DebugLogFormat("Save loaded from {0}", fullPath);
         }
+        #endregion //Read/Write
 
+        #region DebugWrite
         private static void DebugLog(string message)
         {
             if (!DisplayDebug)
@@ -336,7 +354,13 @@ namespace FerthurSaver
 
             DebugLog(string.Format(message, obj));
         }
+        #endregion //DebugWrite
 
+        #region Clear Save
+        /// <summary>
+        /// Delete a save file
+        /// </summary>
+        /// <param name="saveName"> Save to delete </param>
         public static void DestroySave(string saveName)
         {
             string fullPath = GetFullFilePath(saveName);
@@ -344,14 +368,21 @@ namespace FerthurSaver
             File.Delete(fullPath);
         }
 
+        /// <summary>
+        /// Clear all features from save
+        /// </summary>
         public static void ClearSave()
         {
             _saveData.Clear();
+            _saveData.AddCategory(DEFAULT_CATEGORY);
         }
+        #endregion //Clear Save
 
+        #region Helpers
         private static string GetFullFilePath(string saveName)
         {
             return (Path.Combine(_filePath, string.Format("save_{0}{1}", saveName, EXTENTION)));
         }
+        #endregion
     }
 }

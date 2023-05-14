@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace FerthurSaver
 {
+    /// <summary>
+    /// Inherit from this to override how the class is write in Save file
+    /// </summary>
     public interface ISaveItem
     {
         string ToSaveText();
