@@ -7,7 +7,7 @@
   "api/FerthurSaver.BinarySaveSerializer.html": {
     "href": "api/FerthurSaver.BinarySaveSerializer.html",
     "title": "Class BinarySaveSerializer | Ferthur Saver",
-    "keywords": "Class BinarySaveSerializer Inheritance Object BinarySaveSerializer Implements ISaveSerializer Namespace : FerthurSaver Assembly : cs.temp.dll.dll Syntax [Obsolete(\"Not work for now\")] public class BinarySaveSerializer : ISaveSerializer Constructors BinarySaveSerializer() Declaration public BinarySaveSerializer() Methods Deserialize(Byte[]) Declaration public SaveData Deserialize(byte[] bytes) Parameters Type Name Description Byte [] bytes Returns Type Description SaveData Serialize(SaveData) Declaration public byte[] Serialize(SaveData saveData) Parameters Type Name Description SaveData saveData Returns Type Description Byte [] Implements ISaveSerializer"
+    "keywords": "Class BinarySaveSerializer Inheritance Object BinarySaveSerializer Implements ISaveSerializer Namespace : FerthurSaver Assembly : cs.temp.dll.dll Syntax public class BinarySaveSerializer : ISaveSerializer Constructors BinarySaveSerializer() Declaration public BinarySaveSerializer() Methods Deserialize(Byte[]) Declaration public SaveData Deserialize(byte[] bytes) Parameters Type Name Description Byte [] bytes Returns Type Description SaveData Serialize(SaveData) Declaration public byte[] Serialize(SaveData saveData) Parameters Type Name Description SaveData saveData Returns Type Description Byte [] Implements ISaveSerializer"
   },
   "api/FerthurSaver.CategoryDict.html": {
     "href": "api/FerthurSaver.CategoryDict.html",
