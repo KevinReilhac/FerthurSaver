@@ -60,6 +60,66 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Components.SaveInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Components.SaveInitializer.html",
+          "hash": "mblMVyJTnZHZ1VnQ+jKfO1kllilQ6pJYKwvN7I5oiio="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Components.html",
+          "hash": "7yo6qNZccH2C3DbWs4YG33d6zaFdxGiQisP4b1U9/f8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Editors.CustomMenuItems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Editors.CustomMenuItems.html",
+          "hash": "sMQ+QmzEFkDmPmf07MSPde49ZhU9KW+y7wmxJeL79Cw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Editors.SaveInitializerCustomEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Editors.SaveInitializerCustomEditor.html",
+          "hash": "c56QBVwVGQJEg2qyEuSAfDiaglpAwHAj1B9D+F5wng0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Editors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Editors.html",
+          "hash": "k9nYcdnL+KGt6DaCDVERTKUL3Wc2WNG3bE/ircoeKSg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/FerthurSaver.Feature-1.yml",
       "output": {
         ".html": {
@@ -76,7 +136,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.Feature.html",
-          "hash": "QuwZRFjgLZc0R9YUjId5vzSD2jdpGMHzUHWvhgdBur0="
+          "hash": "kOly0tNSuzZkL1/qdB1LwLBiNL9Uul3tWb1uuKrxDhU="
         }
       },
       "is_incremental": false,
@@ -136,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.Save.html",
-          "hash": "ilnYJMi7PdZDUHYLbgiXkrVdvgHaclR0dY6U04RWPdE="
+          "hash": "C4iHUTIUXmm+RS7m8XumjSnCVTf9fXlnr0alLNnTlIg="
         }
       },
       "is_incremental": false,
@@ -148,7 +208,127 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.SaveData.html",
-          "hash": "yTmZlludc0Cep6oZHfE1LmpUEZR03giAo2Lhff+7bDo="
+          "hash": "UZUemAq69L1Tn2Qchk7GQBp5OCGz9vzeANL8aEbsg0o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Settings.AesEncryptorSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Settings.AesEncryptorSettings.html",
+          "hash": "q2F656CnIdh05pmivBGTFpzCuDVgkOZJiFXdYNNyGeQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Settings.BinarySerializerSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Settings.BinarySerializerSettings.html",
+          "hash": "e5+Ri0SZCJJKCBjl+et7eEiZ+iDGfDQWWPLOPlal0Hs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.html",
+          "hash": "Fj7wJPuwH6UqfkaKAkvUSt5AUVrNS3ru0NLTShhHdok="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Settings.Editors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Settings.Editors.html",
+          "hash": "vzlmOu4+DoP8O/gSqgraZKFPus36NWePRTIYER/9cBQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Settings.Encryption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Settings.Encryption.html",
+          "hash": "/q9B2fvBjQf8xxgu/u8knu3CvMxqk0FVg0Y76mU9wm0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Settings.JsonSerializerSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Settings.JsonSerializerSettings.html",
+          "hash": "qUEt1NtEpwl4OpvV24ZNw1n/yM0WS11d7Bo/ok4U3rE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Settings.PathOrigin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Settings.PathOrigin.html",
+          "hash": "g/3qYJZRF3bpCSFMm/ZumGeRUsUlZSZDZV9T/AZ2uL0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Settings.SaveSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Settings.SaveSettings.html",
+          "hash": "xNNKe4i0aqBzbPp9J7kq3oQ6P6ZXMRCzaIhH8mQmE7w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Settings.Serializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Settings.Serializer.html",
+          "hash": "wDoRjvzJNW+lm0vw2EY5POJin+IgY/flCgaeWJZ0gC8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FerthurSaver.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FerthurSaver.Settings.html",
+          "hash": "wNFnISSBjkeO1k4q3IOGh4KG4qfog59U0/peF+4uSWc="
         }
       },
       "is_incremental": false,
@@ -160,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.ACustomTypeWriter.html",
-          "hash": "99kVS8VkZXFyxTJXHyaZ4hHXXtqmaaCdDQ6H3rKDf7k="
+          "hash": "MmHo4hYWBBEnBil/F/HOGqKdo+Ms0lG6by5E+NZdHtw="
         }
       },
       "is_incremental": false,
@@ -172,7 +352,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.BoolTypeWriter.html",
-          "hash": "9XVlqxYF8IMJM5CECe1ptyPOn6AJ7qb9mwbISXQbjLA="
+          "hash": "tFqrpxqUwXtFeMQ1BF7ZBPeyt6/bbU6KgvqZ05HV2Mk="
         }
       },
       "is_incremental": false,
@@ -184,7 +364,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.CustomTypeWriters.html",
-          "hash": "yywW0ecmzSZyVN2qRMkEcLLQN5RlR3KQbXTBE6c5tSw="
+          "hash": "d5Po1OSGHAsWzVGWFaMPY+QjTQLOLhFRX5KGXApoe+o="
         }
       },
       "is_incremental": false,
@@ -196,7 +376,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.DoubleTypeWriter.html",
-          "hash": "zA9DlqLDAlhiENHDW1SYk6QHvESWWthh8PCyOg55dvY="
+          "hash": "FAn7zXTmylDXuEs7rsGyO1JkTvSdt2zDV7W1aK2PehU="
         }
       },
       "is_incremental": false,
@@ -208,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.FloatTypeWriter.html",
-          "hash": "ZJYlACCaTs3kj55IZZPcysSoLmVWBGoWPYGptXCLCfE="
+          "hash": "Xf+mkH03KJRRwZ4igTz8SKdPqaNtNyAZR2Sy5sVlyuk="
         }
       },
       "is_incremental": false,
@@ -220,7 +400,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.IntTypeWriter.html",
-          "hash": "mT7wB7BYe+iCLzAJjcMBvJnZ8C2Vd3mtAT9OoPH8ieo="
+          "hash": "2Q1mvQNiSlmlMYB5TqaSqAW00znmRii6uMmOxGIM1Qg="
         }
       },
       "is_incremental": false,
@@ -232,7 +412,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.LongTypeWriter.html",
-          "hash": "xgiFKEabyD77g9OZLzpe3s76Yh6JdCtrmLW656URkdg="
+          "hash": "AS0lKAbPli2OUjEU8eLs1xbvXXhngDDPoqK3akyLchk="
         }
       },
       "is_incremental": false,
@@ -244,7 +424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.StringTypeWriter.html",
-          "hash": "5P8yN9LQckwW0BrJeuXhmnL3xbLTHPE9xntyVRY70Hc="
+          "hash": "Jj+VHyt3EOEHHYVI7/+UCSuTnildpIZNDQRyK+30qxU="
         }
       },
       "is_incremental": false,
@@ -256,7 +436,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.Vector2IntTypeWriter.html",
-          "hash": "jL2xCo0/qyr6zn3NZaYLKdBmYDHRz6YWTueMe6Nxc7c="
+          "hash": "ofkllHYgVXwT4D8k4VfT4z7n7d0VrhQw6j8o+g6QieI="
         }
       },
       "is_incremental": false,
@@ -268,7 +448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.Vector2TypeWriter.html",
-          "hash": "0JJMj74jDB3aH86ADmYhc8MRiHNUhZKgiU9/9RIiVeI="
+          "hash": "GXcOmzYmibcFf0khnnpbt7LJ+sv5EqmP6WI4hb9oKSo="
         }
       },
       "is_incremental": false,
@@ -280,7 +460,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.Vector3IntTypeWriter.html",
-          "hash": "5fBsVM6ixv/pf1DZ1A+/V3QL8Cuo6TpI3UCA/ygZOoU="
+          "hash": "mCVJ96NrNb1P20DMWAO5q3KDsFrxUWj8Yzke6ndC/2Q="
         }
       },
       "is_incremental": false,
@@ -292,7 +472,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FerthurSaver.TypeWriters.Vector3TypeWriter.html",
-          "hash": "DSG+QJJKP77nEY9TpqpzUd+h8LV0vZctEQp8pnZ9qnY="
+          "hash": "EB0qqdJcdmpMq1+jydA6DuXRPSaBcMP15a0cDserWdY="
         }
       },
       "is_incremental": false,
@@ -328,7 +508,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "lVCPgKeQAewAOfsMxtTD3QThlL9Uv3j1XprctnKfgrQ="
+          "hash": "+GEse7jNl3bqSLakWY8D/5aQJgt+OJHTC17rCqCXVcs="
         }
       },
       "is_incremental": false,
@@ -437,7 +617,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 25,
+          "total_file_count": 40,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

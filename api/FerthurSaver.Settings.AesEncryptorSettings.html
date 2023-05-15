@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class LongTypeWriter
+    <title>Class AesEncryptorSettings
    | Ferthur Saver </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class LongTypeWriter
+    <meta name="title" content="Class AesEncryptorSettings
    | Ferthur Saver ">
     <meta name="generator" content="docfx 2.59.4.0">
     
@@ -78,128 +78,37 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="FerthurSaver.TypeWriters.LongTypeWriter">
+            <article class="content wrap" id="_content" data-uid="FerthurSaver.Settings.AesEncryptorSettings">
   
   
-  <h1 id="FerthurSaver_TypeWriters_LongTypeWriter" data-uid="FerthurSaver.TypeWriters.LongTypeWriter" class="text-break">Class LongTypeWriter
+  <h1 id="FerthurSaver_Settings_AesEncryptorSettings" data-uid="FerthurSaver.Settings.AesEncryptorSettings" class="text-break">Class AesEncryptorSettings
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="FerthurSaver.TypeWriters.ACustomTypeWriter.html">ACustomTypeWriter</a></div>
-    <div class="level2"><span class="xref">LongTypeWriter</span></div>
+    <div class="level1"><span class="xref">AesEncryptorSettings</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="FerthurSaver.TypeWriters.html">FerthurSaver.TypeWriters</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="FerthurSaver.Settings.html">FerthurSaver.Settings</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="FerthurSaver_TypeWriters_LongTypeWriter_syntax">Syntax</h5>
+  <h5 id="FerthurSaver_Settings_AesEncryptorSettings_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LongTypeWriter : ACustomTypeWriter</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class AesEncryptorSettings</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="fields">Fields
   </h3>
   
   
-  <a id="FerthurSaver_TypeWriters_LongTypeWriter_Type_" data-uid="FerthurSaver.TypeWriters.LongTypeWriter.Type*"></a>
-  <h4 id="FerthurSaver_TypeWriters_LongTypeWriter_Type" data-uid="FerthurSaver.TypeWriters.LongTypeWriter.Type">Type</h4>
+  <h4 id="FerthurSaver_Settings_AesEncryptorSettings_IV" data-uid="FerthurSaver.Settings.AesEncryptorSettings.IV">IV</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Type Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string IV</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Type</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="FerthurSaver.TypeWriters.ACustomTypeWriter.html#FerthurSaver_TypeWriters_ACustomTypeWriter_Type">ACustomTypeWriter.Type</a></div>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="FerthurSaver_TypeWriters_LongTypeWriter_FromText_" data-uid="FerthurSaver.TypeWriters.LongTypeWriter.FromText*"></a>
-  <h4 id="FerthurSaver_TypeWriters_LongTypeWriter_FromText_System_String_" data-uid="FerthurSaver.TypeWriters.LongTypeWriter.FromText(System.String)">FromText(String)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override object FromText(string text)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">text</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="FerthurSaver.TypeWriters.ACustomTypeWriter.html#FerthurSaver_TypeWriters_ACustomTypeWriter_FromText_System_String_">ACustomTypeWriter.FromText(String)</a></div>
-  
-  
-  <a id="FerthurSaver_TypeWriters_LongTypeWriter_ToText_" data-uid="FerthurSaver.TypeWriters.LongTypeWriter.ToText*"></a>
-  <h4 id="FerthurSaver_TypeWriters_LongTypeWriter_ToText_System_Object_" data-uid="FerthurSaver.TypeWriters.LongTypeWriter.ToText(System.Object)">ToText(Object)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToText(object value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -214,8 +123,30 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="FerthurSaver.TypeWriters.ACustomTypeWriter.html#FerthurSaver_TypeWriters_ACustomTypeWriter_ToText_System_Object_">ACustomTypeWriter.ToText(Object)</a></div>
+  
+  
+  <h4 id="FerthurSaver_Settings_AesEncryptorSettings_Key" data-uid="FerthurSaver.Settings.AesEncryptorSettings.Key">Key</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Key</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

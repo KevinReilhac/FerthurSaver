@@ -124,6 +124,94 @@ references:
   commentId: T:FerthurSaver.CategoryDict
   fullName: FerthurSaver.CategoryDict
   nameWithType: CategoryDict
+- uid: FerthurSaver.Components
+  name: FerthurSaver.Components
+  href: api/FerthurSaver.Components.html
+  commentId: N:FerthurSaver.Components
+  fullName: FerthurSaver.Components
+  nameWithType: FerthurSaver.Components
+- uid: FerthurSaver.Components.SaveInitializer
+  name: SaveInitializer
+  href: api/FerthurSaver.Components.SaveInitializer.html
+  commentId: T:FerthurSaver.Components.SaveInitializer
+  fullName: FerthurSaver.Components.SaveInitializer
+  nameWithType: SaveInitializer
+- uid: FerthurSaver.Components.SaveInitializer.Initialize
+  name: Initialize()
+  href: api/FerthurSaver.Components.SaveInitializer.html#FerthurSaver_Components_SaveInitializer_Initialize
+  commentId: M:FerthurSaver.Components.SaveInitializer.Initialize
+  fullName: FerthurSaver.Components.SaveInitializer.Initialize()
+  nameWithType: SaveInitializer.Initialize()
+- uid: FerthurSaver.Components.SaveInitializer.Initialize*
+  name: Initialize
+  href: api/FerthurSaver.Components.SaveInitializer.html#FerthurSaver_Components_SaveInitializer_Initialize_
+  commentId: Overload:FerthurSaver.Components.SaveInitializer.Initialize
+  isSpec: "True"
+  fullName: FerthurSaver.Components.SaveInitializer.Initialize
+  nameWithType: SaveInitializer.Initialize
+- uid: FerthurSaver.Components.SaveInitializer.settings
+  name: settings
+  href: api/FerthurSaver.Components.SaveInitializer.html#FerthurSaver_Components_SaveInitializer_settings
+  commentId: F:FerthurSaver.Components.SaveInitializer.settings
+  fullName: FerthurSaver.Components.SaveInitializer.settings
+  nameWithType: SaveInitializer.settings
+- uid: FerthurSaver.Editors
+  name: FerthurSaver.Editors
+  href: api/FerthurSaver.Editors.html
+  commentId: N:FerthurSaver.Editors
+  fullName: FerthurSaver.Editors
+  nameWithType: FerthurSaver.Editors
+- uid: FerthurSaver.Editors.CustomMenuItems
+  name: CustomMenuItems
+  href: api/FerthurSaver.Editors.CustomMenuItems.html
+  commentId: T:FerthurSaver.Editors.CustomMenuItems
+  fullName: FerthurSaver.Editors.CustomMenuItems
+  nameWithType: CustomMenuItems
+- uid: FerthurSaver.Editors.CustomMenuItems.CreateSaveInitializer
+  name: CreateSaveInitializer()
+  href: api/FerthurSaver.Editors.CustomMenuItems.html#FerthurSaver_Editors_CustomMenuItems_CreateSaveInitializer
+  commentId: M:FerthurSaver.Editors.CustomMenuItems.CreateSaveInitializer
+  fullName: FerthurSaver.Editors.CustomMenuItems.CreateSaveInitializer()
+  nameWithType: CustomMenuItems.CreateSaveInitializer()
+- uid: FerthurSaver.Editors.CustomMenuItems.CreateSaveInitializer*
+  name: CreateSaveInitializer
+  href: api/FerthurSaver.Editors.CustomMenuItems.html#FerthurSaver_Editors_CustomMenuItems_CreateSaveInitializer_
+  commentId: Overload:FerthurSaver.Editors.CustomMenuItems.CreateSaveInitializer
+  isSpec: "True"
+  fullName: FerthurSaver.Editors.CustomMenuItems.CreateSaveInitializer
+  nameWithType: CustomMenuItems.CreateSaveInitializer
+- uid: FerthurSaver.Editors.SaveInitializerCustomEditor
+  name: SaveInitializerCustomEditor
+  href: api/FerthurSaver.Editors.SaveInitializerCustomEditor.html
+  commentId: T:FerthurSaver.Editors.SaveInitializerCustomEditor
+  fullName: FerthurSaver.Editors.SaveInitializerCustomEditor
+  nameWithType: SaveInitializerCustomEditor
+- uid: FerthurSaver.Editors.SaveInitializerCustomEditor.CreateSettingsFile
+  name: CreateSettingsFile()
+  href: api/FerthurSaver.Editors.SaveInitializerCustomEditor.html#FerthurSaver_Editors_SaveInitializerCustomEditor_CreateSettingsFile
+  commentId: M:FerthurSaver.Editors.SaveInitializerCustomEditor.CreateSettingsFile
+  fullName: FerthurSaver.Editors.SaveInitializerCustomEditor.CreateSettingsFile()
+  nameWithType: SaveInitializerCustomEditor.CreateSettingsFile()
+- uid: FerthurSaver.Editors.SaveInitializerCustomEditor.CreateSettingsFile*
+  name: CreateSettingsFile
+  href: api/FerthurSaver.Editors.SaveInitializerCustomEditor.html#FerthurSaver_Editors_SaveInitializerCustomEditor_CreateSettingsFile_
+  commentId: Overload:FerthurSaver.Editors.SaveInitializerCustomEditor.CreateSettingsFile
+  isSpec: "True"
+  fullName: FerthurSaver.Editors.SaveInitializerCustomEditor.CreateSettingsFile
+  nameWithType: SaveInitializerCustomEditor.CreateSettingsFile
+- uid: FerthurSaver.Editors.SaveInitializerCustomEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/FerthurSaver.Editors.SaveInitializerCustomEditor.html#FerthurSaver_Editors_SaveInitializerCustomEditor_OnInspectorGUI
+  commentId: M:FerthurSaver.Editors.SaveInitializerCustomEditor.OnInspectorGUI
+  fullName: FerthurSaver.Editors.SaveInitializerCustomEditor.OnInspectorGUI()
+  nameWithType: SaveInitializerCustomEditor.OnInspectorGUI()
+- uid: FerthurSaver.Editors.SaveInitializerCustomEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/FerthurSaver.Editors.SaveInitializerCustomEditor.html#FerthurSaver_Editors_SaveInitializerCustomEditor_OnInspectorGUI_
+  commentId: Overload:FerthurSaver.Editors.SaveInitializerCustomEditor.OnInspectorGUI
+  isSpec: "True"
+  fullName: FerthurSaver.Editors.SaveInitializerCustomEditor.OnInspectorGUI
+  nameWithType: SaveInitializerCustomEditor.OnInspectorGUI
 - uid: FerthurSaver.Feature
   name: Feature
   href: api/FerthurSaver.Feature.html
@@ -570,6 +658,19 @@ references:
   isSpec: "True"
   fullName: FerthurSaver.Save.Initialize
   nameWithType: Save.Initialize
+- uid: FerthurSaver.Save.IsInitialized
+  name: IsInitialized
+  href: api/FerthurSaver.Save.html#FerthurSaver_Save_IsInitialized
+  commentId: P:FerthurSaver.Save.IsInitialized
+  fullName: FerthurSaver.Save.IsInitialized
+  nameWithType: Save.IsInitialized
+- uid: FerthurSaver.Save.IsInitialized*
+  name: IsInitialized
+  href: api/FerthurSaver.Save.html#FerthurSaver_Save_IsInitialized_
+  commentId: Overload:FerthurSaver.Save.IsInitialized
+  isSpec: "True"
+  fullName: FerthurSaver.Save.IsInitialized
+  nameWithType: Save.IsInitialized
 - uid: FerthurSaver.Save.OnFeatureUpdated
   name: OnFeatureUpdated
   href: api/FerthurSaver.Save.html#FerthurSaver_Save_OnFeatureUpdated
@@ -797,6 +898,182 @@ references:
   isSpec: "True"
   fullName: FerthurSaver.SaveData.TryGetFeature
   nameWithType: SaveData.TryGetFeature
+- uid: FerthurSaver.Settings
+  name: FerthurSaver.Settings
+  href: api/FerthurSaver.Settings.html
+  commentId: N:FerthurSaver.Settings
+  fullName: FerthurSaver.Settings
+  nameWithType: FerthurSaver.Settings
+- uid: FerthurSaver.Settings.AesEncryptorSettings
+  name: AesEncryptorSettings
+  href: api/FerthurSaver.Settings.AesEncryptorSettings.html
+  commentId: T:FerthurSaver.Settings.AesEncryptorSettings
+  fullName: FerthurSaver.Settings.AesEncryptorSettings
+  nameWithType: AesEncryptorSettings
+- uid: FerthurSaver.Settings.AesEncryptorSettings.IV
+  name: IV
+  href: api/FerthurSaver.Settings.AesEncryptorSettings.html#FerthurSaver_Settings_AesEncryptorSettings_IV
+  commentId: F:FerthurSaver.Settings.AesEncryptorSettings.IV
+  fullName: FerthurSaver.Settings.AesEncryptorSettings.IV
+  nameWithType: AesEncryptorSettings.IV
+- uid: FerthurSaver.Settings.AesEncryptorSettings.Key
+  name: Key
+  href: api/FerthurSaver.Settings.AesEncryptorSettings.html#FerthurSaver_Settings_AesEncryptorSettings_Key
+  commentId: F:FerthurSaver.Settings.AesEncryptorSettings.Key
+  fullName: FerthurSaver.Settings.AesEncryptorSettings.Key
+  nameWithType: AesEncryptorSettings.Key
+- uid: FerthurSaver.Settings.BinarySerializerSettings
+  name: BinarySerializerSettings
+  href: api/FerthurSaver.Settings.BinarySerializerSettings.html
+  commentId: T:FerthurSaver.Settings.BinarySerializerSettings
+  fullName: FerthurSaver.Settings.BinarySerializerSettings
+  nameWithType: BinarySerializerSettings
+- uid: FerthurSaver.Settings.Editors
+  name: FerthurSaver.Settings.Editors
+  href: api/FerthurSaver.Settings.Editors.html
+  commentId: N:FerthurSaver.Settings.Editors
+  fullName: FerthurSaver.Settings.Editors
+  nameWithType: FerthurSaver.Settings.Editors
+- uid: FerthurSaver.Settings.Editors.SaveSettingsCustomEditor
+  name: SaveSettingsCustomEditor
+  href: api/FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.html
+  commentId: T:FerthurSaver.Settings.Editors.SaveSettingsCustomEditor
+  fullName: FerthurSaver.Settings.Editors.SaveSettingsCustomEditor
+  nameWithType: SaveSettingsCustomEditor
+- uid: FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.html#FerthurSaver_Settings_Editors_SaveSettingsCustomEditor_OnInspectorGUI
+  commentId: M:FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.OnInspectorGUI
+  fullName: FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.OnInspectorGUI()
+  nameWithType: SaveSettingsCustomEditor.OnInspectorGUI()
+- uid: FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.html#FerthurSaver_Settings_Editors_SaveSettingsCustomEditor_OnInspectorGUI_
+  commentId: Overload:FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.OnInspectorGUI
+  isSpec: "True"
+  fullName: FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.OnInspectorGUI
+  nameWithType: SaveSettingsCustomEditor.OnInspectorGUI
+- uid: FerthurSaver.Settings.Encryption
+  name: Encryption
+  href: api/FerthurSaver.Settings.Encryption.html
+  commentId: T:FerthurSaver.Settings.Encryption
+  fullName: FerthurSaver.Settings.Encryption
+  nameWithType: Encryption
+- uid: FerthurSaver.Settings.Encryption.Aes
+  name: Aes
+  href: api/FerthurSaver.Settings.Encryption.html#FerthurSaver_Settings_Encryption_Aes
+  commentId: F:FerthurSaver.Settings.Encryption.Aes
+  fullName: FerthurSaver.Settings.Encryption.Aes
+  nameWithType: Encryption.Aes
+- uid: FerthurSaver.Settings.Encryption.None
+  name: None
+  href: api/FerthurSaver.Settings.Encryption.html#FerthurSaver_Settings_Encryption_None
+  commentId: F:FerthurSaver.Settings.Encryption.None
+  fullName: FerthurSaver.Settings.Encryption.None
+  nameWithType: Encryption.None
+- uid: FerthurSaver.Settings.JsonSerializerSettings
+  name: JsonSerializerSettings
+  href: api/FerthurSaver.Settings.JsonSerializerSettings.html
+  commentId: T:FerthurSaver.Settings.JsonSerializerSettings
+  fullName: FerthurSaver.Settings.JsonSerializerSettings
+  nameWithType: JsonSerializerSettings
+- uid: FerthurSaver.Settings.JsonSerializerSettings.prettyPrint
+  name: prettyPrint
+  href: api/FerthurSaver.Settings.JsonSerializerSettings.html#FerthurSaver_Settings_JsonSerializerSettings_prettyPrint
+  commentId: F:FerthurSaver.Settings.JsonSerializerSettings.prettyPrint
+  fullName: FerthurSaver.Settings.JsonSerializerSettings.prettyPrint
+  nameWithType: JsonSerializerSettings.prettyPrint
+- uid: FerthurSaver.Settings.PathOrigin
+  name: PathOrigin
+  href: api/FerthurSaver.Settings.PathOrigin.html
+  commentId: T:FerthurSaver.Settings.PathOrigin
+  fullName: FerthurSaver.Settings.PathOrigin
+  nameWithType: PathOrigin
+- uid: FerthurSaver.Settings.PathOrigin.DataPath
+  name: DataPath
+  href: api/FerthurSaver.Settings.PathOrigin.html#FerthurSaver_Settings_PathOrigin_DataPath
+  commentId: F:FerthurSaver.Settings.PathOrigin.DataPath
+  fullName: FerthurSaver.Settings.PathOrigin.DataPath
+  nameWithType: PathOrigin.DataPath
+- uid: FerthurSaver.Settings.PathOrigin.PersistantDataPath
+  name: PersistantDataPath
+  href: api/FerthurSaver.Settings.PathOrigin.html#FerthurSaver_Settings_PathOrigin_PersistantDataPath
+  commentId: F:FerthurSaver.Settings.PathOrigin.PersistantDataPath
+  fullName: FerthurSaver.Settings.PathOrigin.PersistantDataPath
+  nameWithType: PathOrigin.PersistantDataPath
+- uid: FerthurSaver.Settings.SaveSettings
+  name: SaveSettings
+  href: api/FerthurSaver.Settings.SaveSettings.html
+  commentId: T:FerthurSaver.Settings.SaveSettings
+  fullName: FerthurSaver.Settings.SaveSettings
+  nameWithType: SaveSettings
+- uid: FerthurSaver.Settings.SaveSettings.aesEncryptorSettings
+  name: aesEncryptorSettings
+  href: api/FerthurSaver.Settings.SaveSettings.html#FerthurSaver_Settings_SaveSettings_aesEncryptorSettings
+  commentId: F:FerthurSaver.Settings.SaveSettings.aesEncryptorSettings
+  fullName: FerthurSaver.Settings.SaveSettings.aesEncryptorSettings
+  nameWithType: SaveSettings.aesEncryptorSettings
+- uid: FerthurSaver.Settings.SaveSettings.binarySerializerSettings
+  name: binarySerializerSettings
+  href: api/FerthurSaver.Settings.SaveSettings.html#FerthurSaver_Settings_SaveSettings_binarySerializerSettings
+  commentId: F:FerthurSaver.Settings.SaveSettings.binarySerializerSettings
+  fullName: FerthurSaver.Settings.SaveSettings.binarySerializerSettings
+  nameWithType: SaveSettings.binarySerializerSettings
+- uid: FerthurSaver.Settings.SaveSettings.categories
+  name: categories
+  href: api/FerthurSaver.Settings.SaveSettings.html#FerthurSaver_Settings_SaveSettings_categories
+  commentId: F:FerthurSaver.Settings.SaveSettings.categories
+  fullName: FerthurSaver.Settings.SaveSettings.categories
+  nameWithType: SaveSettings.categories
+- uid: FerthurSaver.Settings.SaveSettings.encryption
+  name: encryption
+  href: api/FerthurSaver.Settings.SaveSettings.html#FerthurSaver_Settings_SaveSettings_encryption
+  commentId: F:FerthurSaver.Settings.SaveSettings.encryption
+  fullName: FerthurSaver.Settings.SaveSettings.encryption
+  nameWithType: SaveSettings.encryption
+- uid: FerthurSaver.Settings.SaveSettings.GetPath
+  name: GetPath()
+  href: api/FerthurSaver.Settings.SaveSettings.html#FerthurSaver_Settings_SaveSettings_GetPath
+  commentId: M:FerthurSaver.Settings.SaveSettings.GetPath
+  fullName: FerthurSaver.Settings.SaveSettings.GetPath()
+  nameWithType: SaveSettings.GetPath()
+- uid: FerthurSaver.Settings.SaveSettings.GetPath*
+  name: GetPath
+  href: api/FerthurSaver.Settings.SaveSettings.html#FerthurSaver_Settings_SaveSettings_GetPath_
+  commentId: Overload:FerthurSaver.Settings.SaveSettings.GetPath
+  isSpec: "True"
+  fullName: FerthurSaver.Settings.SaveSettings.GetPath
+  nameWithType: SaveSettings.GetPath
+- uid: FerthurSaver.Settings.SaveSettings.jsonSerializerSettings
+  name: jsonSerializerSettings
+  href: api/FerthurSaver.Settings.SaveSettings.html#FerthurSaver_Settings_SaveSettings_jsonSerializerSettings
+  commentId: F:FerthurSaver.Settings.SaveSettings.jsonSerializerSettings
+  fullName: FerthurSaver.Settings.SaveSettings.jsonSerializerSettings
+  nameWithType: SaveSettings.jsonSerializerSettings
+- uid: FerthurSaver.Settings.SaveSettings.serializer
+  name: serializer
+  href: api/FerthurSaver.Settings.SaveSettings.html#FerthurSaver_Settings_SaveSettings_serializer
+  commentId: F:FerthurSaver.Settings.SaveSettings.serializer
+  fullName: FerthurSaver.Settings.SaveSettings.serializer
+  nameWithType: SaveSettings.serializer
+- uid: FerthurSaver.Settings.Serializer
+  name: Serializer
+  href: api/FerthurSaver.Settings.Serializer.html
+  commentId: T:FerthurSaver.Settings.Serializer
+  fullName: FerthurSaver.Settings.Serializer
+  nameWithType: Serializer
+- uid: FerthurSaver.Settings.Serializer.Binary
+  name: Binary
+  href: api/FerthurSaver.Settings.Serializer.html#FerthurSaver_Settings_Serializer_Binary
+  commentId: F:FerthurSaver.Settings.Serializer.Binary
+  fullName: FerthurSaver.Settings.Serializer.Binary
+  nameWithType: Serializer.Binary
+- uid: FerthurSaver.Settings.Serializer.JSON
+  name: JSON
+  href: api/FerthurSaver.Settings.Serializer.html#FerthurSaver_Settings_Serializer_JSON
+  commentId: F:FerthurSaver.Settings.Serializer.JSON
+  fullName: FerthurSaver.Settings.Serializer.JSON
+  nameWithType: Serializer.JSON
 - uid: FerthurSaver.TypeWriters
   name: FerthurSaver.TypeWriters
   href: api/FerthurSaver.TypeWriters.html
@@ -899,11 +1176,11 @@ references:
   commentId: T:FerthurSaver.TypeWriters.CustomTypeWriters
   fullName: FerthurSaver.TypeWriters.CustomTypeWriters
   nameWithType: CustomTypeWriters
-- uid: FerthurSaver.TypeWriters.CustomTypeWriters.GetTypeWriter(System.Type)
+- uid: FerthurSaver.TypeWriters.CustomTypeWriters.GetTypeWriter(Type)
   name: GetTypeWriter(Type)
-  href: api/FerthurSaver.TypeWriters.CustomTypeWriters.html#FerthurSaver_TypeWriters_CustomTypeWriters_GetTypeWriter_System_Type_
-  commentId: M:FerthurSaver.TypeWriters.CustomTypeWriters.GetTypeWriter(System.Type)
-  fullName: FerthurSaver.TypeWriters.CustomTypeWriters.GetTypeWriter(System.Type)
+  href: api/FerthurSaver.TypeWriters.CustomTypeWriters.html#FerthurSaver_TypeWriters_CustomTypeWriters_GetTypeWriter_Type_
+  commentId: M:FerthurSaver.TypeWriters.CustomTypeWriters.GetTypeWriter(Type)
+  fullName: FerthurSaver.TypeWriters.CustomTypeWriters.GetTypeWriter(Type)
   nameWithType: CustomTypeWriters.GetTypeWriter(Type)
 - uid: FerthurSaver.TypeWriters.CustomTypeWriters.GetTypeWriter*
   name: GetTypeWriter
@@ -934,13 +1211,13 @@ references:
   isSpec: "True"
   fullName: FerthurSaver.TypeWriters.CustomTypeWriters.Initialize
   nameWithType: CustomTypeWriters.Initialize
-- uid: FerthurSaver.TypeWriters.CustomTypeWriters.TryGetCustomTypeWriter(System.Type,FerthurSaver.TypeWriters.ACustomTypeWriter@)
+- uid: FerthurSaver.TypeWriters.CustomTypeWriters.TryGetCustomTypeWriter(Type,FerthurSaver.TypeWriters.ACustomTypeWriter@)
   name: TryGetCustomTypeWriter(Type, out ACustomTypeWriter)
-  href: api/FerthurSaver.TypeWriters.CustomTypeWriters.html#FerthurSaver_TypeWriters_CustomTypeWriters_TryGetCustomTypeWriter_System_Type_FerthurSaver_TypeWriters_ACustomTypeWriter__
-  commentId: M:FerthurSaver.TypeWriters.CustomTypeWriters.TryGetCustomTypeWriter(System.Type,FerthurSaver.TypeWriters.ACustomTypeWriter@)
+  href: api/FerthurSaver.TypeWriters.CustomTypeWriters.html#FerthurSaver_TypeWriters_CustomTypeWriters_TryGetCustomTypeWriter_Type_FerthurSaver_TypeWriters_ACustomTypeWriter__
+  commentId: M:FerthurSaver.TypeWriters.CustomTypeWriters.TryGetCustomTypeWriter(Type,FerthurSaver.TypeWriters.ACustomTypeWriter@)
   name.vb: TryGetCustomTypeWriter(Type, ByRef ACustomTypeWriter)
-  fullName: FerthurSaver.TypeWriters.CustomTypeWriters.TryGetCustomTypeWriter(System.Type, out FerthurSaver.TypeWriters.ACustomTypeWriter)
-  fullName.vb: FerthurSaver.TypeWriters.CustomTypeWriters.TryGetCustomTypeWriter(System.Type, ByRef FerthurSaver.TypeWriters.ACustomTypeWriter)
+  fullName: FerthurSaver.TypeWriters.CustomTypeWriters.TryGetCustomTypeWriter(Type, out FerthurSaver.TypeWriters.ACustomTypeWriter)
+  fullName.vb: FerthurSaver.TypeWriters.CustomTypeWriters.TryGetCustomTypeWriter(Type, ByRef FerthurSaver.TypeWriters.ACustomTypeWriter)
   nameWithType: CustomTypeWriters.TryGetCustomTypeWriter(Type, out ACustomTypeWriter)
   nameWithType.vb: CustomTypeWriters.TryGetCustomTypeWriter(Type, ByRef ACustomTypeWriter)
 - uid: FerthurSaver.TypeWriters.CustomTypeWriters.TryGetCustomTypeWriter*
