@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a6ee6e9c35272547a29586362284d36, type: 3}
   m_Name: SaveSettings
   m_EditorClassIdentifier: 
-  pathOrigin: 0
-  path: 
+  pathOrigin: 1
+  path: /Saves
   serializer: 0
   encryption: 0
   categories: []
+  jsonSerializerSettings:
+    prettyPrint: 1
+  aesEncryptorSettings:
+    IV: Juzy4gcymkJP6HZE
+    Key: xjmfsEkN0WVG423i

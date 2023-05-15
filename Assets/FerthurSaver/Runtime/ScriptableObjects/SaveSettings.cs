@@ -26,11 +26,11 @@ namespace FerthurSaver.Settings
     [CreateAssetMenu(fileName = "SaveSettings", menuName = "FerthurSaver/Settings")]
     public class SaveSettings : ScriptableObject
     {
-        [SerializeField] private PathOrigin pathOrigin;
-        [SerializeField] private string path;
+        [SerializeField] private PathOrigin pathOrigin = PathOrigin.PersistantDataPath;
+        [SerializeField] private string path = "/Saves";
 
-        public Serializer serializer;
-        public Encryption encryption;
+        public Serializer serializer = Serializer.JSON;
+        public Encryption encryption = Encryption.None;
         public List<string> categories;
 
         public JsonSerializerSettings jsonSerializerSettings;
