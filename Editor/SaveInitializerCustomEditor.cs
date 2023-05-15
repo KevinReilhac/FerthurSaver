@@ -32,6 +32,7 @@ namespace FerthurSaver.Editors
                 if (GUILayout.Button("Create new settings"))
                 {
                     initializer.settings = CreateSettingsFile();
+                    settingsEditor = Editor.CreateEditor(initializer.settings);
                     EditorUtility.SetDirty(initializer);
                 }
             }

@@ -7,10 +7,17 @@ namespace FerthurSaver.Components
 {
     public class SaveInitializer : MonoBehaviour
     {
-        public SaveSettings settings;
+        public SaveSettings settings = null;
 
         private void Awake()
         {
+            if (settings == null)
+            {
+                Debug.LogError("Save Initializer need settings");
+                enabled = false;
+                return;
+            }
+
             if (!Save.IsInitialized)
                 Initialize();
             else
