@@ -2,259 +2,259 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.AesSaveEncryptor.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.BinarySaveSerializer.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.CategoryDict.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Components.SaveInitializer.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Components.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Editors.CustomMenuItems.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Editors.SaveInitializerCustomEditor.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Editors.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Feature.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Feature-1.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.FeatureUpdatedEvent.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.ISaveItem.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.ISaveSerializer.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.JsonUtilitySaveSerializer.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Save.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.SaveData.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Settings.AesEncryptorSettings.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Settings.BinarySerializerSettings.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Settings.Editors.SaveSettingsCustomEditor.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Settings.Editors.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Settings.Encryption.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Settings.JsonSerializerSettings.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Settings.PathOrigin.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Settings.SaveSettings.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Settings.Serializer.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.Settings.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.ACustomTypeWriter.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.BoolTypeWriter.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.CustomTypeWriters.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.DoubleTypeWriter.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.FloatTypeWriter.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.IntTypeWriter.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.LongTypeWriter.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.StringTypeWriter.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.Vector2IntTypeWriter.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.Vector2TypeWriter.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.Vector3IntTypeWriter.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.Vector3TypeWriter.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.TypeWriters.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/api/FerthurSaver.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/index.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/manual/coniunctis.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kevinreilhac.github.io/FerthurSaver/manual/etiam.html</loc>
-    <lastmod>2023-05-15T02:51:42+00:00</lastmod>
+    <lastmod>2023-05-15T03:07:10+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
