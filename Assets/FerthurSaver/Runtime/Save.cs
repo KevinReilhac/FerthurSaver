@@ -22,10 +22,10 @@ namespace FerthurSaver
         private static SaveData _saveData;
         private static ISaveSerializer _saveSerializer;
         private static ISaveEncryptor _saveEncryptor;
-        private static bool _isInitialized;
         private static string _filePath;
 
         public static bool DisplayDebug = true;
+        public static bool IsInitialized {get; private set;} = false;
 
         public static event FeatureUpdatedEvent OnFeatureUpdated;
         public static event Action onWriteAsyncStart;
@@ -47,7 +47,7 @@ namespace FerthurSaver
             _saveSerializer = saveSerializer;
             _saveEncryptor = saveEncryptor;
             _filePath = filePath;
-            _isInitialized = true;
+            IsInitialized = true;
             DebugLogFormat("Initialize with {0} and {1}", saveEncryptor != null ? saveEncryptor.GetType().Name : "null", saveSerializer != null ? saveSerializer.GetType().Name : "null");
         }
 
@@ -62,7 +62,7 @@ namespace FerthurSaver
         /// <returns></returns>
         public static Feature<T> Get<T>(string key, string category = DEFAULT_CATEGORY, T defaultValue = default(T), bool createIfNotExist = true)
         {
-            if (!_isInitialized)
+            if (!IsInitialized)
             {
                 Debug.LogError(NOT_INITILIZED_MESSAGE);
                 return (new Feature<T>(defaultValue));
@@ -110,7 +110,7 @@ namespace FerthurSaver
         /// <returns> Defined feature </returns>
         public static Feature<T> Set<T>(string key, T value, string category = DEFAULT_CATEGORY, bool createIfNotExist = true)
         {
-            if (!_isInitialized)
+            if (!IsInitialized)
             {
                 Debug.LogError(NOT_INITILIZED_MESSAGE);
                 return (new Feature<T>());
@@ -169,7 +169,7 @@ namespace FerthurSaver
         /// <returns>Created feature</returns>
         public static Feature<T> AddFeature<T>(string key, T value, string category = "default")
         {
-            if (!_isInitialized)
+            if (!IsInitialized)
             {
                 Debug.LogError(NOT_INITILIZED_MESSAGE);
                 return (new Feature<T>());
@@ -204,7 +204,7 @@ namespace FerthurSaver
         /// <returns>The list of all features of a category (null if category not exist)</returns>
         public static List<Feature<T>> GetCategory<T>(string category)
         {
-            if (!_isInitialized)
+            if (!IsInitialized)
             {
                 Debug.LogError(NOT_INITILIZED_MESSAGE);
                 return (null);
@@ -235,7 +235,7 @@ namespace FerthurSaver
         /// <returns>The list of all features of a category (null if category not exist)</returns>
         public static List<Feature> GetCategory(string category)
         {
-            if (!_isInitialized)
+            if (!IsInitialized)
             {
                 Debug.LogError(NOT_INITILIZED_MESSAGE);
                 return (null);
