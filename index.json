@@ -12,7 +12,7 @@
   "api/FerthurSaver.CategoryDict.html": {
     "href": "api/FerthurSaver.CategoryDict.html",
     "title": "Class CategoryDict | Ferthur Saver",
-    "keywords": "Class CategoryDict Inheritance Object Dictionary < String , Feature > CategoryDict Namespace : FerthurSaver Assembly : cs.temp.dll.dll Syntax public class CategoryDict : Dictionary<string, Feature>, IDictionary<string, Feature>, ICollection<KeyValuePair<string, Feature>>, IDictionary, ICollection, IReadOnlyDictionary<string, Feature>, IReadOnlyCollection<KeyValuePair<string, Feature>>, IEnumerable<KeyValuePair<string, Feature>>, IEnumerable, ISerializable, IDeserializationCallback"
+    "keywords": "Class CategoryDict Inheritance Object CategoryDict Namespace : FerthurSaver Assembly : cs.temp.dll.dll Syntax public class CategoryDict : Dictionary<string, Feature>"
   },
   "api/FerthurSaver.Components.html": {
     "href": "api/FerthurSaver.Components.html",
